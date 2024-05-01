@@ -1,5 +1,4 @@
 #include <cstdio>
-#include <algorithm>
 using namespace std;
 
 void Sort(int arr[], int N) {
