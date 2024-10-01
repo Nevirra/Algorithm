@@ -26,10 +26,8 @@ int main() {
             max = num;
     }
 
-    // 산술평균
-    int mean = round(sum / N);
-    if (mean == -0) mean = 0;  // -0을 0으로 변환
-    cout << mean << endl;
+    int average = round(sum / N);
+    cout << (average == -0 ? 0 : average) << endl; // -0 문제 해결
 
     int midIndex = N / 2;
     int median = 0, midCount = 0;
@@ -45,15 +43,13 @@ int main() {
     int mode = 0;
     int maxCount = 0;
     int modeCount = 0;
-    int modeIndex = -1;
+
     for (int i = 0; i < 8001; ++i) {
         if (arr[i] > maxCount) {
             maxCount = arr[i];
             mode = i - 4000;
             modeCount = 1;
-            modeIndex = mode;
-        }
-        else if (arr[i] == maxCount) {
+        } else if (arr[i] == maxCount) {
             modeCount++;
             if (modeCount == 2) {
                 mode = i - 4000;
