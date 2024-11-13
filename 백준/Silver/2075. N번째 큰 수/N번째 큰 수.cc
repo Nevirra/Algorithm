@@ -5,7 +5,7 @@
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false); // 입력 속도 최적화
+    ios::sync_with_stdio(false);
     cin.tie(0);
 
     int N;
